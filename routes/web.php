@@ -1,16 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Dashboard\DashboardController;
 use App\Http\Controllers\ConsultarAgenda\ConsultarAgendaController;
 use App\Http\Controllers\AgendarCliente\AgendarClienteController;
 
-// PUBLICO
-Route::get('/', [LoginController::class, 'index'])->name('login');
-Route::post('/login', [LoginController::class, 'autenticacao'])->name('login.autenticacao');
+// Redireciona a raiz para o dashboard
+Route::get('/', [DashboardController::class, 'index'])->name('dashboard.index');
 
-// PROTEGIDO
 Route::middleware(['guest'])->group(function () {
     Route::prefix('/dashboard')->name('dashboard.')->group(function () {
         Route::get('/', [DashboardController::class, 'index'])->name('index');
@@ -28,3 +25,4 @@ Route::middleware(['guest'])->group(function () {
         Route::delete('/delete/{id}', [ConsultarAgendaController::class, 'destroy'])->name('destroy');
     });
 });
+
