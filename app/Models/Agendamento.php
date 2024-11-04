@@ -5,14 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Valor extends Model
+class Agendamento extends Model
 {
     use HasFactory;
 
-    // TABELA VALORES
-    protected $table = 'valores';
-    // ATRIBUTOS
+    protected $table = 'agendamentos';
+
     protected $fillable = [
-        'acao', 'valor', 'data', 'descricao'
+        'nome_cliente', 'procedimento', 'valor', 'data', 'horario'
     ];
 }
+

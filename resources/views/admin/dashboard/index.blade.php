@@ -11,14 +11,9 @@
 <body>
     <div class="custom-box d-flex flex-column align-items-center">
         <img src="{{ asset('/assets/images/salao.png') }}" alt="logo" class="logo" onclick="location.href='{{ route('dashboard.index') }}'">
-<!--    <div class="saldo">
-            <h3 class="saldotext">SALDO ATUAL</h3>
-            <h2 class="{{ $saldoClass }}">R$ {{ number_format($saldoTotal, 2, ',', '.') }}</h2>
-        </div> -->
         <form class="login-form"> 
             <a href="{{ route('agendarcliente.index') }}" type="button" class="btn btn-primary btn-inserir">AGENDAR CLIENTE</a>
             <a href="{{ route('consultaragenda.index') }}" type="button" class="btn btn-primary btn-consultar">CONSULTAR AGENDA</a>
-<!--        <img src="{{ asset('assets/images/tesoura.png') }}" alt="tesoura"  class="tesoura"> -->
         </form>
     </div>
 </body>

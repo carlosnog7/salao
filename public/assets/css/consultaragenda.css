@@ -216,38 +216,7 @@ body {
     top: 120px;
     right: 22px;
 }
-.btn-planilha-entradas{
-    font-family: 'Roboto', sans-serif;
-    font-size: 10px;
-    background-color: #0FB900;
-    color: white;
-    width: 60px;
-    height: 25px;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    line-height: 25px;
-    position: absolute;
-    top: 193px;
-    right: 160px;
-}
-.btn-planilha-saidas{
-    font-family: 'Roboto', sans-serif;
-    font-size: 10px;
-    background-color: #FF7777;
-    color: white;
-    width: 60px;
-    height: 25px;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    line-height: 25px;
-    position: absolute;
-    top: 193px;
-    right: 91px;
-}
+
 .btn-planilha-geral{
     font-family: 'Roboto', sans-serif;
     font-size: 10px;
@@ -267,5 +236,13 @@ body {
 }
 .movimentacoes{
     top: 20px;
+    
 }
 
+.table-custom {
+    color: white; 
+}
+
+.table-custom th, .table-custom td {
+    border-color: rgba(255, 255, 255, 0.1); 
+}

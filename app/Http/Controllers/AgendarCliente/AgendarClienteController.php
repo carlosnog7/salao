@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\AgendarCliente;
 
 use App\Http\Controllers\Controller;
-use App\Models\Valor;
+use App\Models\Agendamento;
 use Illuminate\Http\Request;
 
 class AgendarClienteController extends Controller
@@ -16,20 +16,22 @@ class AgendarClienteController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'acao' => 'required|string',
+            'nomedacliente' => 'required|string|max:255',
+            'procedimento' => 'required|string|max:255',
             'valor' => 'required|numeric',
             'data' => 'required|date',
-            'descricao' => 'required|string|max:255',
+            'horario' => 'required|date_format:H:i',
         ]);
 
-        Valor::create([
-            'acao' => $request->acao,
+        Agendamento::create([
+            'nome_cliente' => $request->nomedacliente,
+            'procedimento' => $request->procedimento,
             'valor' => $request->valor,
             'data' => $request->data,
-            'descricao' => $request->descricao,
+            'horario' => $request->horario,
         ]);
 
-        return redirect()->route('consultaragenda.index')->with('success', 'Valor inserido com sucesso!');
+        return redirect()->route('consultaragenda.index')->with('success', 'Agendamento realizado com sucesso!');
     }
 }
 

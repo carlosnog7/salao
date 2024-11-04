@@ -1,20 +1,21 @@
-<div class="modal fade modal_editar_valor" id="modalEditarValor" tabindex="-1" aria-labelledby="modalEditarValorLabel" aria-hidden="true">
+<div class="modal fade modal_editar_agendamento" id="modalEditarAgendamento" tabindex="-1" aria-labelledby="modalEditarAgendamentoLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="modalEditarValorLabel">Editar Valor</h1>
+                <h1 class="modal-title fs-5" id="modalEditarAgendamentoLabel">Editar Agendamento</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form class="row g-3" id="editarValorForm" method="POST">
+                <form class="row g-3" id="editarAgendamentoForm" method="POST">
                     @csrf
                     @method('PUT')
                     <div class="col-md-12">
-                        <label for="acao" class="form-label">Ação</label>
-                        <select class="form-control" name="acao" id="acao">
-                            <option value="entrada">Entrada</option>
-                            <option value="saida">Saída</option>
-                        </select>
+                        <label for="nome_cliente" class="form-label">Nome do Cliente</label>
+                        <input type="text" class="form-control" name="nome_cliente" id="nome_cliente"> 
+                    </div>
+                    <div class="col-md-12">
+                        <label for="procedimento" class="form-label">Procedimento</label>
+                        <input type="text" class="form-control" name="procedimento" id="procedimento">
                     </div>
                     <div class="col-md-12">
                         <label for="valor" class="form-label">Valor</label>
@@ -25,8 +26,8 @@
                         <input type="date" class="form-control" name="data" id="data">
                     </div>
                     <div class="col-md-12">
-                        <label for="descricao" class="form-label">Descrição</label>
-                        <input type="text" class="form-control" name="descricao" id="descricao">
+                        <label for="horario" class="form-label">Horário</label>
+                        <input type="time" class="form-control" name="horario" id="horario">
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
