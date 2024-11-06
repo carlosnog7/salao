@@ -19,7 +19,9 @@ body {
 
 .inner-box {
     background-color: #333333;
-    width: 550px;
+    /*width: 550px;
+    height: 450px;*/
+    width: 400px;
     height: 450px;
     margin: auto;
     border-radius: 25px;
@@ -30,8 +32,11 @@ body {
     transform: translate(-50%, -50%);
     z-index: 2;
 }
-
-
+/*
+.acao{
+    color: #333333;
+}
+*/
 .logo {
     margin-bottom: 20px;
     position: absolute;

@@ -9,6 +9,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="/assets/css/consultaragenda.css" rel="stylesheet">
     <script defer src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/js/all.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
 
 <body>
@@ -29,19 +31,17 @@
                             <label class="movimentacoes">CLIENTES AGENDADAS</label>
                             <thead>
                                 <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Nome do Cliente</th>
-                                    <th scope="col">Procedimento</th>
+                                    <th scope="col">Cliente</th>
+                                    <th scope="col">Proced.</th>
                                     <th scope="col">Valor</th>
                                     <th scope="col">Data</th>
                                     <th scope="col">Horário</th>
-                                    <th scope="col">Ação</th>
+                                    <th scope="col" class="acao">Ação</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach($agendamentos as $agendamento)
                                     <tr>
-                                        <th scope="row">{{ $agendamento->id }}</th>
                                         <td>{{ $agendamento->nome_cliente }}</td>
                                         <td>{{ $agendamento->procedimento }}</td>
                                         <td>R${{ number_format($agendamento->valor, 2, ',', '.') }}</td>
