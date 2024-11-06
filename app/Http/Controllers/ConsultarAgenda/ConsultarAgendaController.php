@@ -22,14 +22,6 @@ class ConsultarAgendaController extends Controller
 
     public function update(Request $request, $id)
     {
-        $request->validate([
-            'nome_cliente' => 'required|string|max:255',
-            'procedimento' => 'required|string|max:255',
-            'valor' => 'required|numeric',
-            'data' => 'required|date',
-            'horario' => 'required|date_format:H:i',
-        ]);
-
         $agendamento = Agendamento::findOrFail($id);
         $agendamento->nome_cliente = $request->nome_cliente;
         $agendamento->procedimento = $request->procedimento;
